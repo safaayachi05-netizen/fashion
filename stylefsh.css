@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d9c4b0;
+    font-family: 'EB Garamond', serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* ── FASHION MODEL h1 ── */
+h1 {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 10;
+    font-family:'Times New Roman', Times, serif;
+    font-style:italic;
+    font-size: 2rem;
+    color: #000000;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+/* ── CONTAINER ── */
+.model {
+    position: relative;
+    width: 480px;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #d9c4b0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── SARA MILLER h2 — فاصل في الوسط ── */
+h2 {
+    width: 100%;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 4rem;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    letter-spacing: 18px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    z-index: 10;
+    background-color: #d9c4b0;
+    flex-shrink: 0;
+}
+
+/* ── MAIN IMAGE — يسار ── */
+.image {
+    width: 100%;
+    height: 60vh;
+    flex-shrink: 0;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+}
+
+/* ── BOTTOM SECTION ── */
+.fashion {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 22px 28px 22px;
+    gap: 18px;
+    background-color: #d9c4b0;
+}
+
+/* ── BIO TEXT ── */
+.fashion p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.88rem;
+    color: #1a1209;
+    line-height: 1.7;
+    max-width: 260px;
+}
+
+/* ── POLAROID PHOTOS ── */
+.photos {
+    display: flex;
+    align-items: flex-end;
+    gap: 0;
+}
+
+.photos img {
+    width: 90px;
+    height: 108px;
+    object-fit: cover;
+    object-position: center 10%;
+    background: white;
+    padding: 5px 5px 18px 5px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.photos img:nth-child(1) {
+    transform: rotate(-8deg) translateY(10px);
+    z-index: 3;
+}
+
+.photos img:nth-child(2) {
+    transform: rotate(-4deg) translateY(4px);
+    z-index: 2;
+    margin-left: -18px;
+}
+
+.photos img:nth-child(3) {
+    transform: rotate(2deg);
+    z-index: 1;
+    margin-left: -18px;
+}
+
+.photos img:hover {
+    transform: rotate(0deg) scale(1.08) !important;
+    z-index: 20;
+}
